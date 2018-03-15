@@ -1,0 +1,24 @@
+{
+    "name": "rowanlibrary/library-api-v2",
+    "description": "Rowan University Library API Interfaces vesion 2",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Philip Shafer",
+            "email": "shafer@rowan.edu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {
+        "silex/silex": "~2.0",
+        "mooseware/yaml-config-service-provider": "2.*",
+        "lokhman/silex-config": "^2.0",
+        "swiftmailer/swiftmailer": "5.*",
+        "twig/twig": "1.*",
+        "doctrine/dbal": "~2.5"
+    }
+}

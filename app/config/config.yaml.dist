@@ -1,0 +1,31 @@
+application:
+  name: 'Rowan Univeristy Library API v2.0'
+  debug: true
+mail.options:
+  host: "smtp.rowan.edu"
+  port: 25
+  username: ~
+  password: ~
+  encryption: ~
+  auth_mode: ~
+dbs:
+  voyager.read:
+    user: '',
+    password: '',
+    host: '',
+    dbname: '',
+    servicename: '',
+    service: false
+voyager:
+  dbname: 'ROWANDB'
+  item_status:
+    'Not Charged': 'Available'
+    'Charged': 'Checked Out'
+  reserve_status:
+    message: 'On Reserve'
+ezproxy.report:
+  subject: "EZProxy Host Error Report"
+  to: ""
+  origins:
+    - "http://ezproxy.rowan.edu"
+    - "http://dev."

@@ -22,7 +22,7 @@ $ezproxy->options("{anything}", function (Application $app, Request $request) {
 $ezproxy->post('/sendreport', function(Application $app, Request $request) {
 
     $data = $request->request->all();
-    $message = \Swift_message::newInstance()
+    $message = \Swift_Message::newInstance()
         ->setSubject($app['config']['ezproxy.report']['subject'])
         ->setFrom($data['email'])
         ->setTo($app['config']['ezproxy.report']['to'])

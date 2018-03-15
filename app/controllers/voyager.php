@@ -23,4 +23,6 @@ $voyager->get('summonrta', function( Application $app, Request $request) {
 
 });
 
+
+
 return $voyager;

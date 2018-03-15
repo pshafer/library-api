@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/../vendor/autoload.php';
 
-use Silex\Application as SilexApplication;
+use Silex\Application as Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Mooseware\Silex\YamlConfigServiceProvider;
@@ -9,7 +9,7 @@ use Symfony\Component\Debug\ExceptionHandler;
 use App\Services\VoyagerService;
 
 ExceptionHandler::register();
-$app = new SilexApplication();
+$app = new Silex\Application();
 $app['env'] = getenv('APP_ENV') ?: 'devel';
 
 
@@ -50,6 +50,9 @@ $app->before(function (Request $request) {
     );
 });
 
+$app->get('/', function(Application $app, Request $request) {
+    return new Response($app['config']['application']['name'], 200);
+});
 
 $app->mount('/', include __DIR__ . '/../app/controllers/voyager.php');
 $app->mount('/ezproxy', include __DIR__ . '/../app/controllers/ezproxy.php');

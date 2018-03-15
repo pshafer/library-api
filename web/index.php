@@ -19,6 +19,8 @@ $app->register(new YamlConfigServiceProvider([
 
 $app['debug'] = $app['config']['application']['debug'];
 
+print '<pre>' . print_r($app['config'], true) . '</pre>';
+
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../app/views',
     'twig.options' => array(

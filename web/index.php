@@ -1,23 +1,23 @@
 <?php
 require_once __DIR__.'/../vendor/autoload.php';
 
-use Silex\Application;
+use Silex\Application as SilexApplication;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Lokhman\Silex\Provider as ToolsProvider;
 use Mooseware\Silex\YamlConfigServiceProvider;
 use Symfony\Component\Debug\ExceptionHandler;
 use App\Services\VoyagerService;
 
 ExceptionHandler::register();
-$app = new Silex\Application();
+$app = new SilexApplication();
 $app['env'] = getenv('APP_ENV') ?: 'devel';
-$app['debug'] = true;
 
-$app->register(new Mooseware\Silex\YamlConfigServiceProvider([
+
+$app->register(new YamlConfigServiceProvider([
     'configPath' => __DIR__ . '/../app/config',
 ]));
 
+$app['debug'] = $app['config']['application']['debug'];
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../app/views',

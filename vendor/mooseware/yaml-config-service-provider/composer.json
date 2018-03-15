@@ -1,0 +1,26 @@
+{
+  "name": "mooseware/yaml-config-service-provider",
+  "description": "Service provider for Silex for using YAML configuration files",
+  "keywords": ["silex"],
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Bastian Martin",
+      "email": "bastian.martin@mooseware.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "silex/silex": ">=2.0",
+    "symfony/yaml": "^3.1"
+  },
+  "require-dev": {
+    "php": ">=5.4.0",
+    "symfony/yaml": "^3.1",
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-0": {"Mooseware\\Silex": "src"}
+  }
+}

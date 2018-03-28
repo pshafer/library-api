@@ -6,6 +6,6 @@
 <p><strong>Destination Host: </strong> {{ destinationHost }}</p>
 <p><strong>User Agent: </strong> {{ userAgent }}</p>
 <p><strong>Referrer: </strong> {{ referrer }}</p>
-<p><strong>Reported By: </strong> {{ name }} ({{ email }})</p>
+<p><strong>Reported By: </strong> {{ name | striptags }} ({{ email }})</p>
 <p><strong>Sender Comments:</strong></p>
-<p>{{ message }}</p>
+<p>{{ message|striptags }}</p>

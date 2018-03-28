@@ -19,6 +19,7 @@
         "lokhman/silex-config": "^2.0",
         "swiftmailer/swiftmailer": "5.*",
         "twig/twig": "1.*",
-        "doctrine/dbal": "~2.5"
+        "doctrine/dbal": "~2.5",
+        "symfony/validator": "~3.4"
     }
 }

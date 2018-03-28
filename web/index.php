@@ -30,6 +30,9 @@ $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
     'dbs.options' => $app['config']['db.options']
 ));
 
+
+$app->register(new Silex\Provider\ValidatorServiceProvider());
+
 $app['voyager.service'] = new VoyagerService($app['dbs']['voyager.readonly'], $app['config']['voyager']);
 
 

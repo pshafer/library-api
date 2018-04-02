@@ -37,10 +37,6 @@ class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
         ),
-        'L' => 
-        array (
-            'Lokhman\\Silex\\' => 14,
-        ),
         'D' => 
         array (
             'Doctrine\\Common\\Cache\\' => 22,
@@ -109,10 +105,6 @@ class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'Lokhman\\Silex\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/lokhman/silex-config/src/Silex',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "19f66b0220ee51d82a8f3dd23fb780c5",
+    "content-hash": "ada81ddd717152467061427d70ca0b90",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -475,50 +475,6 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
-        },
-        {
-            "name": "lokhman/silex-config",
-            "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lokhman/silex-config.git",
-                "reference": "4a290c9dfdd80a52d1c399e6d5dd448962a42215"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lokhman/silex-config/zipball/4a290c9dfdd80a52d1c399e6d5dd448962a42215",
-                "reference": "4a290c9dfdd80a52d1c399e6d5dd448962a42215",
-                "shasum": ""
-            },
-            "require": {
-                "silex/silex": "~2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Lokhman\\Silex\\": "src/Silex"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Lokhman",
-                    "email": "alex.lokhman@gmail.com"
-                }
-            ],
-            "description": "Silex 2.0+ service provider for lightweight framework configuration",
-            "keywords": [
-                "config",
-                "silex",
-                "tools"
-            ],
-            "time": "2017-03-08T11:55:22+00:00"
         },
         {
             "name": "mooseware/yaml-config-service-provider",

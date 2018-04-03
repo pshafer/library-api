@@ -28,4 +28,3 @@ ezproxy.report:
   to: ""
   origins:
     - "http://ezproxy.rowan.edu"
-    - "http://dev."

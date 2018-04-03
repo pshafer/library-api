@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
 {
     public static $files = array (
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
     );
 
@@ -23,6 +23,8 @@ class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
             'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\Validator\\' => 28,
+            'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
@@ -34,10 +36,6 @@ class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
-        ),
-        'L' => 
-        array (
-            'Lokhman\\Silex\\' => 14,
         ),
         'D' => 
         array (
@@ -67,6 +65,14 @@ class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
+        ),
+        'Symfony\\Component\\Validator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/validator',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
         ),
         'Symfony\\Component\\Routing\\' => 
         array (
@@ -99,10 +105,6 @@ class ComposerStaticInit65cbc6fa3a067da17f15f3afe4a96ebe
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'Lokhman\\Silex\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/lokhman/silex-config/src/Silex',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (

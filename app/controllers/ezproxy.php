@@ -17,7 +17,7 @@ $ezproxy->get('/info', function(Application $app) {
 });
 
 $ezproxy->options("{anything}", function (Application $app, Request $request) {
-    return $app->json($app['config']['ezproxy.report']);
+    return new Response('OK', 201);
 })->assert('anything', '.*');
 
 
@@ -86,7 +86,6 @@ $ezproxy->after(function(Request $request, Response $response, Application $app)
         $response->headers->set('Access-Control-Allow-Origin', $origin);
         $response->headers->set('Access-Control-Allow-Headers', 'Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma');
     }
-
 });
 
 return $ezproxy;

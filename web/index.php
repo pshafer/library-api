@@ -12,13 +12,16 @@ ExceptionHandler::register();
 $app = new Silex\Application();
 $app['env'] = getenv('APP_ENV') ?: 'devel';
 
-
+// Register the YAML Config Service provide to read
+// environment configurations
 $app->register(new YamlConfigServiceProvider([
     'configPath' => __DIR__ . '/../app/config',
 ]));
 
+// enable/disable debugging based on environment config
 $app['debug'] = $app['config']['application']['debug'];
 
+// Instantiate / Register the Twig Template Service Provider
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../app/views',
     'twig.options' => array(
@@ -26,20 +29,24 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     ),
 ));
 
+// Instantiate / Register the Doctring ORM DB Service Provider
 $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
     'dbs.options' => $app['config']['db.options']
 ));
 
-
+// Instantiate the Validator Service Provider
 $app->register(new Silex\Provider\ValidatorServiceProvider());
 
+
+// Instantiate a Voyager Service Provider
 $app['voyager.service'] = new VoyagerService($app['dbs']['voyager.readonly'], $app['config']['voyager']);
 
-
-// Swiftmailer
+// Instantiate a Swiftmailer
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app['swiftmailer.options'] = $app['config']['mail.options'];
 
+
+// Middleware that will decode JSON encoded request bodies
 $app->before(function (Request $request) {
     if (0 === strpos($request->headers->get('Content-Type'), 'application/json')) {
         $data = json_decode($request->getContent(), true);
@@ -47,17 +54,22 @@ $app->before(function (Request $request) {
     }
 });
 
+// Middleware to lowercase array keys
 $app->before(function (Request $request) {
     $request->query->replace(
         array_change_key_case($request->query->all())
     );
 });
 
+// Simply Returns The application name on the default route
 $app->get('/', function(Application $app, Request $request) {
     return new Response($app['config']['application']['name'], 200);
 });
 
-$app->mount('/', include __DIR__ . '/../app/controllers/voyager.php');
+// Mount The Voyager controller at the /v1 base url
+$app->mount('/v1', include __DIR__ . '/../app/controllers/voyager.php');
+
+// Mount the EZProxy controller at /ezproxy base url
 $app->mount('/ezproxy', include __DIR__ . '/../app/controllers/ezproxy.php');
 
 $app->run();

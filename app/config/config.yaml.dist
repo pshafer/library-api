@@ -2,7 +2,7 @@ application:
   name: 'Rowan Univeristy Library API v2.0'
   debug: true
 mail.options:
-  host: "smtp.rowan.edu"
+  host: ""
   port: 25
   username: ~
   password: ~
@@ -17,7 +17,7 @@ dbs:
     servicename: '',
     service: false
 voyager:
-  dbname: 'ROWANDB'
+  dbname: 'Voyager DB Name Here'
   item_status:
     'Not Charged': 'Available'
     'Charged': 'Checked Out'

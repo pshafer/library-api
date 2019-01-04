@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * Voyager Service class adapted from the VUFind Voyager ILS Driver
+ *
+ *
+ * https://vufind.org/jenkins/job/VuFind/javadoc/classes/VuFind.ILS.Driver.Voyager.html
+ *
+ * This service class utilizes the methods that only deal with getting Bib Item Statuses
+ *
+ */
 namespace App\Services;
 
 use Doctrine\DBAL\Connection;

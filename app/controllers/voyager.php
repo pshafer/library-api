@@ -6,6 +6,10 @@ use Symfony\Component\HttpFoundation\Response;
 
 $voyager = $app['controllers_factory'];
 
+/**
+ * returns the status of the items for the bibId provided via query string
+ *
+ */
 $voyager->get('summonrta', function( Application $app, Request $request) {
 
     $bibids = $request->get('bibid');
